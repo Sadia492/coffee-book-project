@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
-import { useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
 import Categories from "../components/Categories";
 import Heading from "../components/Heading";
 
@@ -15,7 +15,7 @@ export default function Home() {
         subtitle="Choose your desired coffee category to browse through specific coffees that fit in your taste."
       ></Heading>
       <Categories categories={categories}></Categories>
-      {/* <Outlet></Outlet> */}
+      <Outlet></Outlet>
     </div>
   );
 }
