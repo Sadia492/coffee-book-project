@@ -4,15 +4,30 @@ import { Link, NavLink } from "react-router-dom";
 export default function Navbar() {
   const links = (
     <>
-      <NavLink to="/">
+      <NavLink
+        className={({ isActive }) =>
+          `font-bold ${isActive ? "text-warning" : ""}`
+        }
+        to="/"
+      >
         <li>Home</li>
       </NavLink>
 
-      <NavLink to="/coffees">
+      <NavLink
+        className={({ isActive }) =>
+          `font-bold ${isActive ? "text-warning" : ""}`
+        }
+        to="/coffees"
+      >
         <li>Coffees</li>
       </NavLink>
 
-      <NavLink to="/dashboard">
+      <NavLink
+        className={({ isActive }) =>
+          `font-bold ${isActive ? "text-warning" : ""}`
+        }
+        to="/dashboard"
+      >
         <li>Dashboard</li>
       </NavLink>
     </>
